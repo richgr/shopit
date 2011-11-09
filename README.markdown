@@ -46,7 +46,7 @@ If you don't have a mobile device, you can put an item on HOLD when you leave to
 
 * Status States (List-Item Relationships)
   * Desired Item [desired]
-  * On-Hold Item [hold]
+  * On-Hold Item [hold] (Someone intends to purchase it later or offline)
   * Purchased Item [purchased]
   * Rejected Item [rejected]
   * Postponed Item [postponed]
