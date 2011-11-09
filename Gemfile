@@ -10,7 +10,7 @@
  gem 'jquery-rails', '1.0.16'
  
  # To use ActiveModel has_secure_password
- # gem 'bcrypt-ruby', '~> 3.0.0'
+ gem 'bcrypt-ruby', '~> 3.0.0'
 
 
  # Gems used only for assets and not required
