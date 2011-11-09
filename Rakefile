@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Shopt::Application.load_tasks
+Shopit::Application.load_tasks
