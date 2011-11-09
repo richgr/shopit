@@ -1,5 +1,5 @@
 ----
-# SHOPT - Team Shopping Application (can also be a Gift Registry App)
+# SHOPIT - Team Shopping Application (can also be a Gift Registry App)
 
 This system is designed for real-time collaborative shopping.
 
@@ -10,6 +10,7 @@ Second, create a List and add Items into the list.  Also, add any other users in
 Third, go shopping!  Use the interface to check off any items you purchase.  If you don't have a mobile device, you can put an item on HOLD when you leave to go shopping, and then mark it as PURCHASED when you get home!
 
 ## Classes (Objects)
+
 * Items
   * Item_id (need an index)
   * Item Name [text] (need an index)
@@ -26,27 +27,25 @@ Third, go shopping!  Use the interface to check off any items you purchase.  If 
   * List_id
   * List Name [text]
   * List Description [text]
-* Relationships
+  
+## Relationships
+
+* User-List Relationships (many to many)
   * User_id
   * List_id
-* Shopping
+* List-Item Relationships (many to many)
   * Shopping_id (new row for item history)
   * List_id (need an index)
   * Item_id(s) (need an index)
   * Statuses [text] (need an ndex)
   * To-Be-Purchased-by Date [timestamp]
     
-* Relationships
-  * Shopping List, including:
-    * Item(s)
-    * User(s)
-    * Item Status (Date of Order, of Purchase, of Status Change)
+## List-Item Statuses
 
-  
-* Status States
-  * Desired Item (to go on [desired] the Shopping List)
-  * Intended Item (to be on [hold] on the Shopping list)
-  * Purchased Item (to be on [purchased] on the Shopping list)
-  * Rejected Item (to be [rejected] on the Shopping list)
-  * Postponed Item (to be [postponed] for a future Shopping list)
+* Status States (List-Item Relationships)
+  * Desired Item [desired]
+  * On-Hold Item [hold]
+  * Purchased Item [purchased]
+  * Rejected Item [rejected]
+  * Postponed Item [postponed]
  
