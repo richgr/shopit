@@ -3,6 +3,12 @@
 
 This system is designed for real-time collaborative shopping.
 
+First, you'll need to create Users and Items.
+
+Second, create a List and add Items into the list.  Also, add any other users into the list.
+
+Third, go shopping!  Use the interface to check off any items you purchase.  If you don't have a mobile device, you can put an item on HOLD when you leave to go shopping, and then mark it as PURCHASED when you get home!
+
 ## Classes (Objects)
 * Items
   * Item_id (need an index)
