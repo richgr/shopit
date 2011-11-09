@@ -48,6 +48,6 @@ If you don't have a mobile device, you can put an item on HOLD when you leave to
   * Desired Item [desired]
   * On-Hold Item [hold] - Someone intends to purchase it later or offline
   * Purchased Item [purchased]
-  * Rejected Item [rejected]
-  * Postponed Item [postponed]
+  * Rejected Item [rejected] - Not purchased, not deleted
+  * Postponed Item [postponed] - Not purchased, to be purchased later, possibly on another list
  
