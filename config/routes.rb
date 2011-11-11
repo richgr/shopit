@@ -1,5 +1,8 @@
 Shopit::Application.routes.draw do
 
-  match "/" => "users#new"
+  get "sessions/new"
+
+  match "/new" => "users#new"
+  match "/users" => "users#index"
 
 end
