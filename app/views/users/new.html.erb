@@ -1,18 +1,23 @@
 <h1>Sign Up</h1>
+    <% flash.each do |key, value| %>
+      <div class="flash <%= key %>">
+        <%= value %>
+      </div>
+    <% end %>
 
-<%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
       <ul>
-        <% for message in @user.errors.full_messages %>
+        <% @user.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-  <div class="field">
-  </div>
+
+<%= form_for @user do |f| %>
+  
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>

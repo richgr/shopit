@@ -2,14 +2,14 @@
   <h1><%= @title %></h1>
   Inside the index, eh!
   
-  <% if not notice.nil? %>
-    <div class="notice">
-      Yes, there is a notice message!<br />
-      <%= notice.inspect %><br />
-      <%# notice.each do |key, val| %>
+  <% if not flash.nil? %>
+    <div class="flash">
+      Yes, there is a flash message!<br />
+      <%= flash.inspect %><br />
+      <%# flash.each do |key, val| %>
         <%#= key %>, <%#= val %><br />
       <%# end %>
-      <% notice.each do |key, val| %>
+      <% flash.each do |key, val| %>
         <%= key %>, <%= val %><br />
       <% end %>
     </div>
@@ -19,7 +19,7 @@
 
   <%#= will_paginate %>
   <ul class="users">
-    <%= render @users %>
+    <%#= render @users %>
   </ul>
   <%#= will_paginate %>
 </div>

@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
 
-
   has_secure_password
   
   attr_accessor :password
@@ -13,4 +12,5 @@ class User < ActiveRecord::Base
 #                    :length => 1..50
   validates :email, :presence => true,
                     :length => 1..50
+                      
 end

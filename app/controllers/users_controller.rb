@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
   def index
-#    @users = User.all
-#    @title = "Index of all users"
+    @users = User.all
+    @title = "Index of all users"
   end
   
   def new
@@ -12,12 +12,11 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(params[:user])
-    if @user.create
-      render "new", :notice => 
-                              { :success => "You've been signed up!"}
+    if @user.save
+      redirect_to @user, :flash => { :success => "You're signed up!" }
     else
-      render "new", :notice => 
-                              { :error => "Errors so not saved." }
+      flash.now[:error] = "Invalid email/password combination."
+      render 'new'
     end
   end  
   
