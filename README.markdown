@@ -11,6 +11,11 @@ Third, go shopping!  Use the interface to check off any items you purchase.
 
 If you don't have a mobile device, you can put an item on HOLD when you leave to go shopping, and then mark it as PURCHASED when you get home!
 
+## Workflow (of final project - aka config/routes)
+
+* Root_path = pages#home
+* signin_path
+
 ## Classes (Objects)
 
 * Items

@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= title %></title>
-  <%= render 'layouts/stylesheets' %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%= title %></title>
+    <%= csrf_meta_tag %>
+    <%= javascript_include_tag "application" %>
+    <%= render 'layouts/stylesheets' %>
+  </head>
+  <body>
 
-<%= yield %>
+    <div class="container">
+      <%#= render "layouts/header" %>
+      <header>
+        <% logo = image_tag("shopit.png", :alt => "ShopIt Logo", :class => "round")  %>
+        <%= link_to logo, root_path %>
+        <nav class="round">
+          <ul>
+            <li><%= link_to "Home", root_path %> </li>
+            <li><%= link_to "Sign in", '#' %> </li>
+            <li><%= link_to "Sign up", '#' %> </li>
+          </ul>
+        </nav>
+      </header>
 
-</body>
+      <section class="round">
+
+        <% flash.each do |key, message| %>
+          <div class="flash <%= key %>">
+            <%= message %>
+          </div>
+        <% end %>
+
+        <%= yield %>
+
+      </section>
+      
+      <%#= render "layouts/footer" %>
+      <footer>
+        <nav class="round">
+          <ul>
+            <li>Copyright &copy; 2011-2012  | </li>
+            <li><%= link_to "About", '#' %>  | </li>
+            <li><%= link_to "Contact", '#' %></li>
+          </ul>
+        </nav>
+      </footer>
+
+      
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+
+  </body>
 </html>

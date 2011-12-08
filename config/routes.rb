@@ -1,10 +1,15 @@
 Shopit::Application.routes.draw do
 
-  get "sessions/new"
+#  get "sessions/new"
 
   resources :users
 
-#  match "/new" => "users#new"
-#  match "/users" => "users#index"
+  root :to => "users#index"
+  
+  match "/signup",        :to => "users#new"
+#  match "/admin/users",   :to => "users#index"
+  
+  match "/signin",        :to => "sessions#new"
+  match "/signout",       :to => "sessions#destroy"
 
 end

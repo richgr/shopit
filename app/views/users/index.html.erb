@@ -2,18 +2,13 @@
   <h1><%= @title %></h1>
   Inside the index, eh!
   
-  <% if not flash.nil? %>
+
     <div class="flash">
-      Yes, there is a flash message!<br />
-      <%= flash.inspect %><br />
-      <%# flash.each do |key, val| %>
-        <%#= key %>, <%#= val %><br />
-      <%# end %>
       <% flash.each do |key, val| %>
         <%= key %>, <%= val %><br />
       <% end %>
     </div>
-  <% end %>
+
     
   <%#= render 'shared/micropost_form' %>
 
